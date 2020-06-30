@@ -15,6 +15,7 @@
 브랜치의 기능과 내용
 1. git branch [name] : [name]의 이름의 브랜치를 만듦(파라미터가 없으면 현재branch를 알려줌)(만든 시점의 master값을 똑같이 가져옴)
 2. git checkout [name] : 현재 디랙토리와 다른[name]을 들어갈때 사용
+  2-2. git checkout -b [name] : branch를 만들면서 이동
 3. git log --branches, --decorate, --graph : 각 브랜치들의 log를 보여줌(--graph에 --oneline을 쓰면 좀더 좁게, 간단하게 나옴)
 4. git log [name1]..[name2] : [name1]에는 있고 [name2]에는 없는 것들만 보여줌
 5. git merge [name] : 현재 디랙토리에 [name]의 내용들을 병합함
