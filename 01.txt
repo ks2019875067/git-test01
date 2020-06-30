@@ -1,0 +1,20 @@
+깃 내부에서 돌리는 과정
+1. git init : 현재 디렉토리를 git개발 환경으로 변경(세부적으론 .git파일을 생성)(git지정은 여러개를 할수 있으나 , 사용은 하나만 init한 것만 사용가능)
+2. git add [file] : 개발 디렉토리에 있는 "[file]"을 git이 인식 하게 함(만드는건mkdir, vim)
+3. git commit : add로 git이 인식을 한 파일만 버전을 달고 완상태로 변경함(commit시 나오는 vim은 버전정보를 받기위해 존재함)
+
+##. git clone [http] [dir] : [http]에 있는 git을 [dir]디렉토리에 복붙([dir]이 "." 일경우, 현재 디랙토리임) 
+##. ls -al: 현 디렉토리의 경로들을 전부 보여줌(유용)
+##. cat [file] : [file]의 내용을 프롬프트에 출력
+##. git status : 현 디렉토리의 git이 각 파일들을 어떻게 받아들이는지 출력(매우 유용)(뜨지 않은 것들은 이미 적용된것, untracked는 add가 되지 않아 파일은 있지만 git은 인식 안함,tobecommited : add되어 commit이 가능한 상태)
+##.git config --global user.name [name] : [name]을 적용함 (user.email [email]일경우[email]적용
+##. git이 인식한 파일(add, commit이 된)이 바뀔 경우 다시 해주어야 함
+##.git log : 현재 까지 발생한 모든 변경(-버전)을 보여줌(-p뒤에 사용가능)
+## git commit -m "버전" : "버전"을 가지고 commit 함 (기존의 파일이 존재 할때 바꿀 경우 -am을 쓰면 add+commit을 함)
+
+브랜치의 기능과 내용
+1. git branch [name] : [name]의 이름의 브랜치를 만듦(파라미터가 없으면 현재branch를 알려줌)(만든 시점의 master값을 똑같이 가져옴)
+2. git checkout [name] : 현재 디랙토리와 다른[name]을 들어갈때 사용
+3. git log --branches, --decorate, --graph : 각 브랜치들의 log를 보여줌(--graph에 --oneline을 쓰면 좀더 좁게, 간단하게 나옴)
+4. git log [name1]..[name2] : [name1]에는 있고 [name2]에는 없는 것들만 보여줌
+5. git merge [name] : 현재 디랙토리에 [name]의 내용들을 병합함
